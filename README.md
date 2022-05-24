@@ -9,22 +9,22 @@ repairServicesSystemdbSCHEMA.sql is the schema of the database (only the schema 
 Commands to be used for exporting, importing and creating the database:
 For database exportation excluding the data:
 pg_dump -W -F p --schema-only -U username  -d dbname -h host > Path/filename.sql
--username: The postgreSQL username
--host: The URL of the host (localhost/https://...)
--Path: The directory path where the database is desired to be saved at.
--filename.sql: The database file name.
+- username: The postgreSQL username
+- host: The URL of the host (localhost/https://...)
+- Path: The directory path where the database is desired to be saved at.
+- filename.sql: The database file name.
 
 For database exportation include the data:
 pg_dump -W -F p -U username -d dbname -h host > Path/filename.sql
--username: The postgreSQL username
--host: The URL of the host (localhost/https://...)
--Path: The directory path where the database is desired to be saved at.
--filename.sql: The database file name.
+- username: The postgreSQL username
+- host: The URL of the host (localhost/https://...)
+- Path: The directory path where the database is desired to be saved at.
+- filename.sql: The database file name.
 
 For database importation:
 psql -U username -d dbname -h host < Path/filename.sql
--username: The postgreSQL username
+- username: The postgreSQL username
 dbname: The pre-created database name.
--host: The URL of the host (localhost/https://...)
--Path: The directory path where the database is desired to be imported from.
--filename.sql: The database creation file name.
+- host: The URL of the host (localhost/https://...)
+- Path: The directory path where the database is desired to be imported from.
+- filename.sql: The database creation file name.
